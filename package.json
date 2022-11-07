@@ -1,10 +1,16 @@
 {
-  "name": "practice",
+  "name": "node-practice-nasa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-server": "yarn --prefix server",
+    "install-client": "yarn --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "npm run server & npm run client",
+    "test": "npm run test --prefix server && npm run test --prefix client"
   },
   "repository": {
     "type": "git",
@@ -16,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/skydihy/node-practice/issues"
   },
-  "homepage": "https://github.com/skydihy/node-practice#readme",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+  "homepage": "https://github.com/skydihy/node-practice#readme"
 }
