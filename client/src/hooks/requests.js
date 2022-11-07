@@ -1,4 +1,5 @@
 async function httpGetPlanets() {
+  // TODO: handle port
   const res = await fetch("http://localhost:8000/planets");
   return await res.json();
 }
