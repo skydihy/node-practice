@@ -1,12 +1,16 @@
+const API_URL = `http://localhost:${
+  process.env.NODE_ENV === "production" ? 4000 : 8000
+}`;
+
 async function httpGetPlanets() {
-  // TODO: handle port
-  const res = await fetch("http://localhost:8000/planets");
+  const res = await fetch(`${API_URL}/planets`);
   return await res.json();
 }
 
 async function httpGetLaunches() {
-  // TODO: Once API is ready.
-  // Load launches, sort by flight number, and return as JSON.
+  const res = await fetch(`${API_URL}/launches`);
+  const launchesList = await res.json();
+  return launchesList.sort((a, b) => a.flightNumber - b.flightNumber);
 }
 
 async function httpSubmitLaunch(launch) {
