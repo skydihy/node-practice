@@ -10,11 +10,11 @@ const launchesSchema = new mongoose.Schema({
     required: true,
   },
   mission: {
-    type: string,
+    type: String,
     required: true,
   },
   rocket: {
-    type: string,
+    type: String,
     required: true,
   },
   target: {
