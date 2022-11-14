@@ -10,9 +10,9 @@
     "react-scripts": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "dev": "react-scripts start --watch",
-    "build": "BUILD_PATH=../server/public react-scripts build",
+    "start": "cross-env NODE_ENV=production react-scripts start",
+    "dev": "cross-env NODE_ENV=development react-scripts start --watch",
+    "build": "cross-env NODE_ENV=production BUILD_PATH=../server/public react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

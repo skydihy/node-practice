@@ -1,6 +1,4 @@
-const API_URL = `http://localhost:${
-  process.env.NODE_ENV === "production" ? 4000 : 8000
-}`;
+const API_URL = `http://localhost:${process.env.REACT_APP_SERVER_PORT}`;
 
 async function httpGetPlanets() {
   const res = await fetch(`${API_URL}/planets`);
